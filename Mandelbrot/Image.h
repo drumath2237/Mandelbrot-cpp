@@ -41,6 +41,7 @@ public:
 		file << width << " " << height << endl;
 		file << 255 << endl;
 
+//#pragma omp parallel for
 		for (int j = 0; j < height; j++)for (int i = 0; i < width; i++) {
 			RGB color = getPixel(i, j);
 			file << color.r << " "

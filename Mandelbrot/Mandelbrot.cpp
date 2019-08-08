@@ -19,6 +19,7 @@ int main()
 {
 	Image img = Image();
 
+#pragma omp parallel for
 	for (int j = 0; j < img.height; j++) for (int i = 0; i < img.width; i++) {
 		double x = 4. / (float)img.width * i - 2.;
 		double y = 4. / (float)img.height * j - 2.;
